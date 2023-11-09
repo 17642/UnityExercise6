@@ -18,9 +18,13 @@ public class UiManager : MonoBehaviour
     TMP_Text EnemyStateDisp;
     [SerializeField]
     TMP_Text EnemyHealthDisp;//텍스트 필드
+    //[SerializeField]
+    //Enemy enemyState;//적 상태 확인
     [SerializeField]
-    Enemy enemyState;//적 상태 확인
+    EnemyStateController controller;//상태 컨트롤러(상태 확인
 
+
+    
     // Update is called once per frame
     void Update()
     {
@@ -36,7 +40,7 @@ public class UiManager : MonoBehaviour
         }
         Scoreboard.text ="Score: " +GameManager.instance.SCORE;//GameManager의 점수 가져옴 
 
-        EnemyStateDisp.text = "Enemy State: "+ Enemy.States.GetName(typeof(Enemy.States),enemyState.CurrentState);//상태 가져옴
-        EnemyHealthDisp.text = "Enemy Health: " + ((Enemy)enemyState).ELife;
+        EnemyStateDisp.text = "Enemy State: " + controller.State.GetType().ToString();//상태 가져옴
+        EnemyHealthDisp.text = "Enemy Health: " + controller.enemy.ELife;
     }
 }

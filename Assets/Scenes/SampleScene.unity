@@ -1093,7 +1093,7 @@ MonoBehaviour:
   QuestDisplay: {fileID: 2113745466}
   EnemyStateDisp: {fileID: 363567492}
   EnemyHealthDisp: {fileID: 578135861}
-  enemyState: {fileID: 1892189287}
+  controller: {fileID: 1892189287}
 --- !u!114 &1118748573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,8 +1564,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1892189287}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: GetAttack
+        m_TargetAssemblyTypeName: EnemyStateController, Assembly-CSharp
+        m_MethodName: Operate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
